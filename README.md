@@ -1,6 +1,6 @@
 # Simple Movie-Recommendation-System
 
-Movie lens Dataset
+Get the dataset from Movie lens. It has both test and train sets.
 
 Algorithm:
 1. Load the train data set.
