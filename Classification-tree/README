@@ -1,0 +1,30 @@
+How to run?
+run ClassificationTree.py and give the file path of any of the CSV files in this folder 
+Result: It displays the accuracy for individual fold and also overall accuracy. 
+
+The major functions in the ClassificationTree.py are below with explanantion:
+1. load_data ----------------------------------------------- This method takes the CSV file path as argument, loads the dataset and returns
+2. preprocess_data ----------------------------------------- This function randomizes and then does column wise normalization and returns 
+																the normalized dataset.
+3. create_train_and_test_set ------------------------------- This method takes the normalized dataset and split measure (1. Information gain and 
+																2. Gini). It creates training and test sets which are needed for 10 fold cross-validation. 
+																As each training features set and training class labels set is created, they are 
+																passed to make_dictionary(). 
+4. make_dictionary() ---------------------------------------- This method returns a dictionary of features, values and class labels. The format is 
+																{feature_id1:[value1, class label], [value1, class label]..., 
+																feature_id2:[value1, class label], [value1, class label]...}																												
+5. create_classficiation_tree() ----------------------------- This is the major part of code. This method is called for each attribute and it recursively 
+																gets best feature, best value to split the data by calculating entropy, information gain, 
+																gini values and then adds to left and right nodes and finally returns the generated tree
+																It check for tree terminating conditions:
+																	1. If all the class labels are same then return the node
+																	2. If the dataset is empty or the attributes list is empty, return the majority class
+																otherwise proceed to get best features and split the tree by left and right child nodes.
+6. get_best_split_value() and get_best_feature()------------- These functions return the best feature and best split value at every recursive call of 	
+																create_classficiation_tree()															
+7. get_entropy(), get_gini(), get_majority_class() ---------- As the names are intuitive, they just return the calculated values.
+8. make_predictions() --------------------------------------- Use the test features list and test class list for predicting on the created tree.
+																By checking for the left and right child nodes.
+9. calculate_accuracy() ------------------------------------- This function calculates accuracy by iterating over the test class labels list
+																and comparing with the predicted list which is returned by make_predictions().
+																Finally returns the accuracy value.
