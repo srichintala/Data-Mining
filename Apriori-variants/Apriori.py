@@ -280,7 +280,7 @@ if __name__ == '__main__':
         except ValueError:
             print "Invalid input: Enter correct input values"
 
-    dataset = loadDataSet("K://IUB Sem-4//Data mining- B565//Assignment-4//question-3//nursery_data.txt")
+    dataset = loadDataSet("K://Data mining- B565//Assignment-4//question-3//nursery_data.txt")
     unique_items, binary_item_list = make_binary_matrix(dataset)
     candidates_size_1, item_sets, num_of_transactions = get_transactions(binary_item_list)
     freq_itemsets_level1, freq_itemset1_with_count = get_freq_itemsets_each_level(item_sets, candidates_size_1, min_support, num_of_transactions)
