@@ -1,0 +1,13 @@
+This folder contains the following:
+1. Apriori.py ------------------------------------------ It contains the script for 2 algorithms Fk-1 * F1 and Fk-1 * Fk-1 methods
+														 along with rule generation using confidence pruning and using lift. 
+														 All the major functions are explained in the script. 
+2. Datasets for testing the algorithms: Car Evaluation, Tic-Tac-Toe and Nursery dataset.
+How to run?
+1. Run the Apriori.py script (Change the path of the dataset before running)
+2. Prompts for selecting the method. Give input 1 for Fk-1 * F1 and Fk-1 * Fk-1
+3. Prompts for selecting the measure. 1 for Confidence and 2 for Lift
+4. Prompts for selecting the minimum support. Enter a value between 0 and 1
+5. If confidence is selected in step 3, enter the minimum confidence threshold
+6. If lift is selected in step 3, enter the minimum lift threshold
+
