@@ -295,7 +295,7 @@ def load_data(filepath):
     return dataset
 
 def main():
-    #K:\IUB Sem-4\Data mining- B565\Assignment-2\ques3\iris.csv
+    #K:\Data mining- B565\Assignment-2\ques3\iris.csv
     newfile = raw_input("Enter the complete path of the CSV file:")
     split_measure = int(raw_input("Enter 1 for splitting based on Information gain or Enter 2 for splitting based on GINI:"))
     data_set = load_data(newfile)
